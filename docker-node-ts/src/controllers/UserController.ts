@@ -5,9 +5,10 @@ import User  from '../schemas/User';
 export default class UserController {
   public async getUser(req: Request, res: Response): Promise<Response> {
     const id = req.params.id;
-    const users = await User.find();
 
-    return res.json(users);
+    return res.json(id ? await User.findById(id) : await User.find());
+    
+
   }
 
   public async create(req: Request, res: Response): Promise<Response> {
