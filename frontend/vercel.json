@@ -1,6 +1,0 @@
-{
-  "rewrites": [
-    { "src": "/app", "destination": "/" },
-    {"src": "/app/login", "destination": "login" }
-]
-}
